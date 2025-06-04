@@ -1,59 +1,151 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recuperación después de UCI - Acompañando tu camino...</title>
-    <link rel="stylesheet" href="estilos.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Recuperación después de UCI - Acompañando tu camino</title>
+  <link rel="stylesheet" href="estilos.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet"/>
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
+      background-color: #f5fdfc;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(to right, #aee1f9, #d5f3ef);
+      padding: 2rem;
+      text-align: center;
+      color: #004466;
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin: 0;
+    }
+
+    main {
+      padding: 2rem 1rem;
+      max-width: 960px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 1.5rem;
+      color: #006666;
+    }
+
+    .grid {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      margin-top: 2rem;
+    }
+
+    .tarjeta {
+      background-color: #ffffff;
+      border-radius: 12px;
+      padding: 1.5rem;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      transition: transform 0.2s;
+    }
+
+    .tarjeta:hover {
+      transform: scale(1.02);
+    }
+
+    .tarjeta h3 {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      color: #003d4d;
+    }
+
+    .tarjeta p {
+      color: #555;
+      font-size: 0.95rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #e3f2f1;
+      color: #444;
+      font-size: 0.9rem;
+      margin-top: 3rem;
+    }
+
+    .tarjeta-icono {
+      font-size: 2rem;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  </style>
 </head>
 <body>
+  <header>
+    <h1>Recuperación después de UCI</h1>
+    <p>Acompañando tu camino de vuelta a casa</p>
+  </header>
 
-    <header>
-        <h1>Recuperación después de UCI</h1>
-        <p>Acompañando tu camino de vuelta a casa.</p>
-    </header>
+  <main>
+    <h2>Elige un tema para empezar</h2>
+    <div class="grid">
+      <a href="recuperacion.html">
+        <div class="tarjeta">
+          <div class="tarjeta-icono">🛏️</div>
+          <h3>Tu Recuperación</h3>
+          <p>De UCI a Planta, De Planta a Casa, Ejercicios</p>
+        </div>
+      </a>
 
-    <main>
-        <h2>Elige un tema para empezar:</h2>
+      <a href="cuidados_casa.html">
+        <div class="tarjeta">
+          <div class="tarjeta-icono">🏠</div>
+          <h3>Cuidados en Casa</h3>
+          <p>Medicación y Nutrición</p>
+        </div>
+      </a>
 
-        <a href="recuperacion.html" class="barra-bloque-link">
-            <div class="barra-bloque">
-                <h3>Tu Recuperación</h3>
-                <p>(De UCI a Planta, De Planta a Casa, Ejercicios)</p>
-            </div>
-        </a>
+      <a href="bienestar.html">
+        <div class="tarjeta">
+          <div class="tarjeta-icono">🌿</div>
+          <h3>Bienestar y Readaptación</h3>
+          <p>Emociones, Cansancio, Sueño</p>
+        </div>
+      </a>
 
-        <a href="cuidados_casa.html" class="barra-bloque-link">
-            <div class="barra-bloque">
-                <h3>Cuidados Esenciales en Casa</h3>
-                <p>(Medicación, Nutrición)</p>
-            </div>
-        </a>
+      <a href="apoyo.html">
+        <div class="tarjeta">
+          <div class="tarjeta-icono">🤝</div>
+          <h3>Apoyo y Recursos</h3>
+          <p>Familia, Cuidadores, Recursos Locales</p>
+        </div>
+      </a>
 
-        <a href="bienestar.html" class="barra-bloque-link">
-            <div class="barra-bloque">
-                <h3>Bienestar y Readaptación</h3>
-                <p>(Rec. Mental, Cansancio)</p>
-            </div>
-        </a>
+      <a href="info_adicional.html">
+        <div class="tarjeta">
+          <div class="tarjeta-icono">ℹ️</div>
+          <h3>Información Adicional</h3>
+          <p>FAQ, Glosario, Quiénes Somos</p>
+        </div>
+      </a>
+    </div>
+  </main>
 
-        <a href="apoyo.html" class="barra-bloque-link">
-            <div class="barra-bloque">
-                <h3>Apoyo y Recursos</h3>
-                <p>(Apoyo Familiar, Recursos Locales)</p>
-            </div>
-        </a>
-
-        <a href="info_adicional.html" class="barra-bloque-link">
-            <div class="barra-bloque">
-                <h3>Información Adicional</h3>
-                <p>(FAQ, Glosario, Quiénes Somos)</p>
-            </div>
-        </a>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 - Información de apoyo post-UCI</p> </footer>
-
+  <footer>
+    &copy; 2025 - Información de apoyo post-UCI
+  </footer>
 </body>
 </html>
