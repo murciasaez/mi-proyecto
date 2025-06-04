@@ -1,49 +1,253 @@
+/* estilos.css - Versión con fondo de naturaleza en BODY */
+
 body {
-  background-color: #e6f0ee;
-  font-family: Arial, sans-serif;
-  color: #000;
-  margin: 0;
-  padding: 0 1rem;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #6D4C41; /* Color de texto principal marrón oscuro */
+
+    /* Imagen de fondo para TODA la página */
+    background-image: url('https://www.toptal.com/designers/subtlepatterns/uploads/leaves.png'); /* Reemplaza con la URL/ruta */
+    background-size: cover; /* Cubrir toda la pantalla */
+    background-position: center center; /* Centrar la imagen */
+    background-attachment: fixed; /* Fija el fondo para que no se desplace con el contenido */
+    background-color: #FFF9E6; /* Color de respaldo crema si la imagen no carga */
 }
 
-h1 {
-  font-size: 2rem;
-  margin-top: 2rem;
-  text-align: center;
-  color: #00796b;
+/* Añadimos un overlay semitransparente para mejorar legibilidad */
+body::before {
+    content: "";
+    position: fixed; /* O absolute si prefieres que se desplace */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 249, 230, 0.7); /* Mismo color crema del fondo, pero semitransparente */
+    z-index: -1; /* Pone el overlay detrás del contenido pero sobre la imagen */
+}
+
+
+header {
+    /* Quitamos la imagen de fondo específica del header */
+    background-color: #8BC34A; /* Fondo verde sólido para el header */
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); /* Sombra de texto ligera */
+    padding: 40px 20px; /* Ajustamos padding */
+    text-align: center;
+    position: relative; /* Necesario para que el contenido quede sobre el ::before del body */
+    z-index: 1;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.8em;
+}
+
+header p {
+    font-size: 1.3em;
+    margin-top: 5px;
+}
+
+main {
+    padding: 30px; /* Más padding interno */
+    max-width: 800px;
+    margin: 40px auto; /* Más margen */
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semitransparente para el contenido principal */
+    border-radius: 8px; /* Esquinas redondeadas para el área de contenido */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave para destacar el contenido */
+    position: relative; /* Necesario para que el contenido quede sobre el ::before del body */
+    z-index: 1;
 }
 
 h2 {
-  color: #00796b;
+    color: #8BC34A;
+    text-align: center;
+    margin-bottom: 30px;
+    padding-top: 10px; /* Espacio extra arriba del H2 */
+}
+
+/* Enlace como bloque */
+a.barra-bloque-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.barra-bloque {
+    background-color: #FFFFFF; /* Fondo blanco sólido para los bloques */
+    border: 1px solid #E0E0E0;
+    border-left: 5px solid #8BC34A;
+    border-radius: 8px;
+    padding: 20px 25px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-left-color 0.2s ease;
+    position: relative; /* Para asegurar que está sobre el fondo de main */
+    z-index: 2;
+}
+
+.barra-bloque:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    border-left-color: #FFCC80;
+    cursor: pointer;
+}
+
+.barra-bloque h3 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    color: #8BC34A;
+}
+
+.barra-bloque p {
+    margin-bottom: 0;
+    font-size: 0.95em;
+    color: #A1887F;
 }
 
 footer {
-  text-align: center;
-  font-size: 0.8rem;
-  padding: 1rem;
-  margin-top: 3rem;
-  background-color: #d0e7e3;
-  color: #444;
+    text-align: center;
+    padding: 25px;
+    margin-top: 50px;
+    background-color: rgba(245, 245, 245, 0.9); /* Fondo gris claro semitransparente */
+    color: #A1887F;
+    border-top: 1px solid #E0E0E0;
+    position: relative; /* Necesario para que el contenido quede sobre el ::before del body */
+    z-index: 1;
 }
 
-a {
-  color: #00796b;
-  text-decoration: none;
+footer p {
+    margin: 0;
 }
 
-a:hover {
-  text-decoration: underline;
+main {
+     padding-bottom: 50px;
 }
 
-button {
-  margin: 0.5rem;
-  padding: 0.5rem 1rem;
-  background-color: #e0f2f1;
-  border: 1px solid #00796b;
-  border-radius: 5px;
-  cursor: pointer;
+.volver-link {
+    display: inline-block;
+    margin-bottom: 30px;
+    padding: 8px 15px;
+    background-color: #FFCC80;
+    color: #6D4C41;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+.volver-link:hover {
+    background-color: #8BC34A;
+    color: white;
 }
 
-button:hover {
-  background-color: #b2dfdb;
+.botones-guia {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+    justify-content: center;
 }
+
+.boton-guia {
+    padding: 12px 25px;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    background-color: #8BC34A;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.boton-guia:hover {
+    background-color: #7CB342;
+    transform: translateY(-2px);
+}
+
+.boton-guia.activo {
+    background-color: #6D4C41;
+    color: #FFCC80;
+}
+
+.contenido-guia {
+    display: none; /* Oculto por defecto */
+    padding: 25px;
+    margin-top: 20px;
+    background-color: #FFFFFF;
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    line-height: 1.7;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.contenido-guia h3 { /* Título principal dentro del contenido */
+    color: #8BC34A;
+    margin-top: 0;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #FFCC80;
+    padding-bottom: 8px;
+    font-size: 1.6em;
+}
+
+ .contenido-guia h4 { /* Subtítulos dentro del contenido */
+    color: #6D4C41;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-size: 1.3em;
+}
+
+.contenido-guia p {
+    margin-bottom: 15px;
+}
+.contenido-guia ul {
+     list-style-position: outside;
+     padding-left: 25px;
+     margin-bottom: 15px;
+}
+ .contenido-guia li {
+     margin-bottom: 8px;
+}
+.contenido-guia table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+}
+.contenido-guia th, .contenido-guia td {
+     border: 1px solid #ddd;
+     padding: 10px;
+     text-align: left;
+}
+ .contenido-guia th {
+     background-color: #f2f2f2;
+     color: #6D4C41;
+}
+
+.contenido-guia audio {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.ejercicio-imagen {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+/* === Estilos para Títulos de Consejos Nutricionales === */
+
+/* Seleccionamos específicamente los h5 dentro de .consejo-nutricional
+   que están dentro del div con id="nutricion" */
+#nutricion .consejo-nutricional h5 {
+    font-size: 1.5em;  /* Hacemos la letra más grande (1.5 veces el tamaño normal). Puedes probar otros valores como 1.4em, 1.6em, 22px, etc. */
+    color: #8BC34A;   /* Cambiamos el color. He usado el verde principal (#8BC34A), pero puedes probar otros como el marrón (#6D4C41) o el naranja (#FFCC80) si prefieres. */
+    margin-bottom: 15px; /* Añadimos un poco más de espacio debajo del título para separarlo del texto siguiente. Ajusta si es necesario. */
+    /* Opcional: Podrías añadir más estilos si quieres, como: */
+    /* font-weight: bold; */ /* Si no estuviera ya en negrita */
+    /* border-bottom: 1px solid #eee; */ /* Una línea sutil debajo */
+    /* padding-bottom: 5px; */ /* Espacio entre el texto y la línea de borde */
+}
+
