@@ -1,100 +1,49 @@
-/* Fondo general */
 body {
-  background-color: #f3fbf7; /* verde menta suave */
-  font-family: 'Open Sans', sans-serif;
+  background-color: #e6f0ee;
+  font-family: Arial, sans-serif;
+  color: #000;
   margin: 0;
-  color: #333;
+  padding: 0 1rem;
 }
 
-/* Encabezado */
-header {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: #ffffff;
-  text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
-  padding: 4rem 1rem;
+h1 {
+  font-size: 2rem;
+  margin-top: 2rem;
   text-align: center;
-}
-
-/* Título principal */
-header h1 {
-  font-size: 3rem;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 0.5rem;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
-}
-
-/* Subtítulo */
-header p {
-  font-size: 1.2rem;
-  margin: 0;
-}
-
-/* Contenido principal */
-main {
-  padding: 2rem 1rem;
-  max-width: 960px;
-  margin: auto;
+  color: #00796b;
 }
 
 h2 {
-  text-align: center;
-  font-size: 1.5rem;
-  color: #006666;
+  color: #00796b;
 }
 
-/* Rejilla de tarjetas */
-.grid {
-  display: grid;
-  gap: 1.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  margin-top: 2rem;
-}
-
-/* Tarjetas visuales */
-.tarjeta {
-  background-color: #ffffff;
-  border-radius: 12px;
-  padding: 1.5rem;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.tarjeta:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
-}
-
-.tarjeta h3 {
-  margin-top: 1rem;
-  font-size: 1.2rem;
-  color: #003d4d;
-}
-
-.tarjeta p {
-  color: #555;
-  font-size: 0.95rem;
-}
-
-.tarjeta-icono {
-  font-size: 2rem;
-}
-
-/* Enlaces */
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-/* Pie de página */
 footer {
   text-align: center;
+  font-size: 0.8rem;
   padding: 1rem;
-  background-color: #e3f2f1;
-  color: #444;
-  font-size: 0.9rem;
   margin-top: 3rem;
+  background-color: #d0e7e3;
+  color: #444;
+}
+
+a {
+  color: #00796b;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #e0f2f1;
+  border: 1px solid #00796b;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #b2dfdb;
 }
